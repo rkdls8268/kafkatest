@@ -3,8 +3,8 @@
 ### 용어 정리
 * 토픽: 레코드(이벤트)들이 저장되는 별도의 저장소 (mysql 저장소 같은 개념)
 * 레코드: 카프카에서는 이벤트를 레코드라고 부른다.
-* 프로듀서: 이벤트를 생성하는 주체
-* 컨슈머: 이벤트를 수신하는 주체
+* 프로듀서: 이벤트를 생성하는 주체 `eventPublisher.publishEvent(...)`
+* 컨슈머: 이벤트를 수신하는 주체 `@KafkaListener(topics = "MemberJoinedEvent")`
 
 ### 토픽 생성하여 kafka 에 send
 ```
