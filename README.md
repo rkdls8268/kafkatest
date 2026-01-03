@@ -6,6 +6,14 @@
 * 프로듀서: 이벤트를 생성하는 주체 `eventPublisher.publishEvent(...)`
 * 컨슈머: 이벤트를 수신하는 주체 `@KafkaListener(topics = "MemberJoinedEvent")`
 
+### 의존성 설치
+```
+    // kafka
+    implementation 'org.springframework.boot:spring-boot-starter-kafka'
+    implementation 'org.apache.kafka:kafka-streams'
+    testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
+```
+
 ### 실행 흐름 요약
 1. kafkaProducer를 감싸고 있는 인스턴스인 KafkaTemplate 을 사용하여 Kafka cluster에 message send
 ```java
